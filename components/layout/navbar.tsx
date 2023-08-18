@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
@@ -13,8 +12,6 @@ const NavBar: React.FC<{ session: Session | null }> = ({ session }) => {
   const scrolled = useScroll(50);
 
   const pathname = typeof window !== "undefined" ? window.location.pathname : "";
-
-  console.log("pathname", pathname);
 
   return (
     <>
