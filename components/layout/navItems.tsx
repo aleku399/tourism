@@ -14,11 +14,8 @@ interface NavItemsProps {
 
 const NavItems: React.FC<NavItemsProps> = ({ pathname }) => {
   const isActive = (path: string) => {
-    console.log("path", path, "pathname", pathname);
     return pathname === path ? "rounded-full bg-gray-200 drop-shadow" : "";
   };
-
-  console.log("isActive", isActive);
 
   return (
     <div className="flex space-x-2">
@@ -28,16 +25,14 @@ const NavItems: React.FC<NavItemsProps> = ({ pathname }) => {
           <Balancer>Stays</Balancer>
         </Link>
     
-     
-        <Link href="/flights" passHref className={`flex space-x-2 items-center px-3.5 py-3.5 ${isActive("/flights")} hover:rounded-full hover:bg-gray-200 hover:drop-shadow`}>
-          <PlaneIcon />
-          <Balancer>Flights</Balancer>
-        </Link>
- 
-   
         <Link href="/attractions" passHref className={`flex space-x-2 items-center px-3.5 py-3.5 ${isActive("/attractions")} hover:rounded-full hover:bg-gray-200 hover:drop-shadow`}>
           <Attractions />          
           <Balancer>Attractions</Balancer>
+        </Link>
+
+        <Link href="/about-us" passHref className={`flex space-x-2 items-center px-3.5 py-3.5 ${isActive("/flights")} hover:rounded-full hover:bg-gray-200 hover:drop-shadow`}>
+          <PlaneIcon />
+          <Balancer>About Us</Balancer>
         </Link>
  
     </div>

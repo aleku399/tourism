@@ -1,29 +1,22 @@
 "use client";
 
-import React, { ChangeEventHandler, useState, useRef } from 'react';
+import React, { ChangeEventHandler, MutableRefObject, useState, useRef } from 'react';
 
 
 interface InputFieldProps {
   type: string;
   placeholder: string;
   value: string | number;
-  onChange: ChangeEventHandler<HTMLInputElement>;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   error: boolean;
   icon: React.ReactNode;
+  inputRef?: MutableRefObject<HTMLInputElement | null>;
+  handleFocus?: () => void;
+  handleBlur?: () => void;
+  isFocused?: boolean;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ type, placeholder, value, error, onChange, icon }) => {
-  const inputRef = useRef<HTMLInputElement>(null);
-  const [isFocused, setIsFocused] = useState(false);
-
-  const handleFocus = () => {
-    setIsFocused(true);
-    inputRef.current?.focus();
-  };
-
-  const handleBlur = () => {
-    setIsFocused(false);
-  };
+const InputField: React.FC<InputFieldProps> = ({ type, placeholder, value, error, onChange, icon, inputRef, handleBlur, handleFocus, isFocused }) => {
 
   return (
     <div
@@ -32,7 +25,6 @@ const InputField: React.FC<InputFieldProps> = ({ type, placeholder, value, error
         ? 'focus-within:border-red border-red'
         : 'focus-within:border-primary border-gray-gray4'
       }`}
-      onClick={() => inputRef.current?.focus()}
     >
       {icon}
       <input

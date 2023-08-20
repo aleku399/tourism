@@ -1,5 +1,3 @@
-export const dynamic = "force-dynamic";
-
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
@@ -9,15 +7,15 @@ import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "Precedent - Building blocks for your Next.js project",
+  title: "Explore Uganda",
   description:
-    "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
+    "Tourism will help you find your next vacation",
   twitter: {
     card: "summary_large_image",
-    title: "Precedent - Building blocks for your Next.js project",
+    title: "Tourism - Explore Uganda",
     description:
-      "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
-    creator: "@steventey",
+      "We will make your stay the best in uganda,",
+    creator: "@aleku399",
   },
   metadataBase: new URL("https://precedent.dev"),
   themeColor: "#FFF",

@@ -95,7 +95,7 @@ function ImageContainer(props: ImageContainer) {
 
     const renderArrows = () => {
         return (
-          <div className="absolute top-11 z-50 flex justify-between  w-full">
+          <div className="absolute top-11 z-10 flex justify-between  w-full">
             <SamplePrevArrow onClick={() => sliderRef.current?.slickPrev()} />
             <SampleNextArrow  onClick={() => sliderRef.current?.slickNext()} />
           </div>
@@ -103,7 +103,7 @@ function ImageContainer(props: ImageContainer) {
     };
 
   return (
-    <div className="z-10 px-7 py-4 w-full max-w-screen-xl animate-fade-up">
+    <div className="mt-3.5 px-7 py-4 w-full max-w-screen-xl animate-fade-up">
       <h1
         className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-lg font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem]"
         style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}

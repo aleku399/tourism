@@ -13,7 +13,7 @@ const locations = [
 
 const LocationCard: React.FC = () => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 mt-2 z-40">
+    <div className="bg-white rounded-lg shadow-md p-4 mt-2 z-40 w-96">
       <h2 className="text-lg font-semibold mb-4">Popular Destinations Nearby</h2>
       <ul className="space-y-2">
         {locations.map((location, index) => (
