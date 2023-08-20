@@ -1,0 +1,33 @@
+"use client";
+
+import React from 'react';
+import { LocationIcon } from '@/components/shared/icons';
+
+const locations = [
+  'New York',
+  'Los Angeles',
+  'Paris',
+  'London',
+  'Tokyo',
+];
+
+const LocationCard: React.FC = () => {
+  return (
+    <div className="bg-white rounded-lg shadow-md p-4 mt-2 z-40 w-96">
+      <h2 className="text-lg font-semibold mb-4">Popular Destinations Nearby</h2>
+      <ul className="space-y-2">
+        {locations.map((location, index) => (
+          <li
+            key={index}
+            className="flex items-center space-x-2 text-gray-700 hover:text-gray-900 cursor-pointer transition"
+          >
+            <LocationIcon />
+            <span>{location}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default LocationCard

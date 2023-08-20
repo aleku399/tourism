@@ -1,0 +1,19 @@
+/* .slider-arrow {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+} */
+
+
+
+
+.slick-slide > div {
+  width: 222px;
+
+}
+
+.slick-slide {
+    width: 222px;
+  
+  }
+
