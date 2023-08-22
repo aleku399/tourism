@@ -94,12 +94,16 @@ function ImageContainer(props: ImageContainer) {
 
 
     const renderArrows = () => {
-        return (
-          <div className="absolute top-11 z-10 flex justify-between  w-full">
+      return (
+        <div className="absolute top-11 z-10 flex justify-between w-full">
+          <div className="hidden md:flex">
             <SamplePrevArrow onClick={() => sliderRef.current?.slickPrev()} />
-            <SampleNextArrow  onClick={() => sliderRef.current?.slickNext()} />
           </div>
-        );
+          <div className="hidden md:flex">
+            <SampleNextArrow onClick={() => sliderRef.current?.slickNext()} />
+          </div>
+        </div>
+      );
     };
 
   return (
