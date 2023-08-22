@@ -62,7 +62,7 @@ const Search: React.FC = () => {
             isFocused={searchStarted} 
             
           />
-          <div className="relative z-50">
+          <div className="relative z-50 mt-2">
             <div className="absolute">
               {searchStarted && <LocationCard />}
             </div>
@@ -94,7 +94,7 @@ const Search: React.FC = () => {
             onChange={handleNumOfPeopleChange}
           />
         </div>
-        <div className="md:flex-grow w-full md:w-auto">
+        <div className="mt-1 md:flex-grow w-full md:w-auto">
           <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none md:w-auto w-full md:w-auto mt-4 md:mt-0">
             Search
           </button>
