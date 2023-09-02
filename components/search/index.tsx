@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, ChangeEvent, useRef, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { BedIcon, Time, People } from '@/components/shared/icons';
@@ -14,7 +15,13 @@ type ValuePiece = Date | null;
 
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
-const Search: React.FC = () => {
+interface SearchProps {
+  locations: any[];
+}
+
+const Search: React.FC<SearchProps> = ({locations}) => {
+  const router = useRouter()
+ 
   const searchContainerRef = useRef<HTMLDivElement | null>(null);
   const locationInputRef = useRef<HTMLInputElement | null>(null);
 
@@ -23,6 +30,8 @@ const Search: React.FC = () => {
   const [numOfPeople, setNumOfPeople] = useState('');
   const [searchStarted, setSearchStarted] = useState(false);
   const [dateSearch, setDateSearch] = useState(false);
+  const [places, setPlaces] = useState(locations);
+  const [slug, setSlug] = useState("");
 
   useOutsideClick({
     ref: searchContainerRef,
@@ -35,15 +44,54 @@ const Search: React.FC = () => {
   };
 
   const handleLocationChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setLocation(event.target.value);
+    const inputValue = event.target.value;
+    setLocation(inputValue);
+
+    const filteredPlaces = locations.filter((place) => {
+      return (
+        place.heading.toLowerCase().includes(inputValue.toLowerCase()) ||
+        place.title.toLowerCase().includes(inputValue.toLowerCase()) ||
+        place.slug.toLowerCase().includes(inputValue.toLowerCase())
+      );
+    });
+
+    setPlaces(filteredPlaces);
   };
+
+  const handleLocationClick = (clickedLocation: any) => {
+    setLocation(clickedLocation.heading);
+    setSlug(clickedLocation.slug);
+    setSearchStarted(false);
+  };
+  
 
   const handleDateFocus = () => {
     setDateSearch(true);
   };
 
+  const handleDateChange = (date: Value, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    if (Array.isArray(date)) {
+      setDepartureDate(date[0]);
+    } else {
+      setDepartureDate(date);
+    }
+    setDateSearch(false);
+  }
+
+
   const handleNumOfPeopleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setNumOfPeople(event.target.value);
+  };
+
+  const handleSearchClick = () => {
+    const queryParams = new URLSearchParams({
+      slug,
+      date: departureDate instanceof Date ? departureDate.toISOString() : '',
+      location,
+      numOfPeople,
+    });
+
+    router.push(`/search-place?${queryParams.toString()}`);
   };
 
   return (
@@ -64,7 +112,7 @@ const Search: React.FC = () => {
           />
           <div className="relative z-50 mt-2">
             <div className="absolute">
-              {searchStarted && <LocationCard />}
+              {searchStarted && <LocationCard locations={places} onLocationClick={handleLocationClick}  />}
             </div>
           </div>
         </div>
@@ -80,7 +128,7 @@ const Search: React.FC = () => {
           />
           <div className="relative z-50 mt-2">
             <div className="absolute">
-              { dateSearch && <Calendar onChange={setDepartureDate} value={departureDate} /> }
+              { dateSearch && <Calendar onChange={handleDateChange} value={departureDate} /> }
             </div>
           </div>
         </div>
@@ -95,7 +143,7 @@ const Search: React.FC = () => {
           />
         </div>
         <div className="mt-1 md:flex-grow w-full md:w-auto">
-          <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none md:w-auto w-full md:w-auto mt-4 md:mt-0">
+          <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none md:w-auto w-full md:w-auto mt-4 md:mt-0" onClick={handleSearchClick}>
             Search
           </button>
         </div>

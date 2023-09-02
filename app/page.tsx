@@ -10,6 +10,7 @@ import { getAllPosts } from "@/lib/api";
 
 export default async function Home() {
 
+
   const allPosts  = getAllPosts([
     'heading',
     'title',
@@ -20,25 +21,33 @@ export default async function Home() {
 
   return (
     <>
-      <div className="z-10 w-full max-w-xl px-5 xl:px-0">
+      <div
+      className="z-10 w-full  px-5 xl:px-0"
+      style={{
+      backgroundImage: "url('/gor.jpg')",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      height: "400px"
+    }}>
         <h1
-          className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem]"
+          className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem] text-white"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
           <Balancer>Explore Uganda</Balancer>
         </h1>
         <p
-          className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 md:text-xl"
+          className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 md:text-xl text-white"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           <Balancer>
             Search deals on resorts, hotels, and much more...
           </Balancer>
         </p>
+        <Search locations={allPosts}  />
       </div>
-      <Search />
-      <CarouselContainer heading="Trending Destinations" subHeading="Travelers searching for Uganda also booked these" allPosts={allPosts} />
-      <CarouselContainer heading="Explore Uganda" subHeading="These popular destinations have a lot to offer" allPosts={allPosts} />
+        <CarouselContainer heading="Trending Destinations" subHeading="Travelers searching for Uganda also booked these" allPosts={allPosts}  />
+        <CarouselContainer heading="Explore Uganda" subHeading="These popular destinations have a lot to offer" allPosts={allPosts} />
     </>
   );
 }

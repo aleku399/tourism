@@ -7,7 +7,17 @@ module.exports = {
     hoverOnlyWhenSupported: true,
   },
   theme: {
+    backgroundSize: {
+      'auto': 'auto',
+      'cover': 'cover',
+      'contain': 'contain',
+      '50%': '50%',
+      '16': '4rem',
+    },
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/gorilla.jpeg')",
+      },
       fontFamily: {
         display: ["var(--font-sf)", "system-ui", "sans-serif"],
         default: ["var(--font-inter)", "system-ui", "sans-serif"],

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import PostBody from '../../../components/post-body'
 import { getPostBySlug, getAllPosts } from '../../../lib/api'
 import markdownToHtml from '../../../lib/markdownToHtml'
+import Inquiry from "@/components/shared/inquiry";
 
 
 type Props = {
@@ -28,13 +29,19 @@ export default  async function Post({ params }: Props) {
   
 
   return (
-      <div className="z-10 w-full max-w-xl px-5 xl:px-0">
+    <>
+      <div className="z-10 w-full max-w-2xl px-5 xl:px-0">
         {!post?.slug ? (
           <p>Loading…</p>
         ) : (
           <>
             <article className="mb-32">
-              <p>{title}</p>
+              <p
+                className="my-0.5 animate-fade-up  opacity-0 md:text-xl"
+                style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
+              >
+                {title}
+              </p>
               <Image
                 src={post.image}
                 alt={`Cover Image for ${post.heading}`}
@@ -46,6 +53,10 @@ export default  async function Post({ params }: Props) {
           </>
         )}
       </div>
+      <div className="z-10 w-full  px-5">
+        <Inquiry />
+      </div>
+    </>
   )
 }
 
