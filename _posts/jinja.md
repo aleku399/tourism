@@ -1,10 +1,28 @@
 ---
 heading: 'Jinja, Uganda'
-title: '6 Days Murchison falls national park- Bugoma forest reserve and Kibale national park primates Safari'
+title: 'Jinja'
 date: '2023-08-02'
-image: /lake.jpeg
+image: /jinja.jpeg
 ---
 
-3 Days Jinja safari
-SAFARI OVERVIEW
-3 Days Jinja safari : This 3 Days Jinja water experience is a must do for everyone while in Uganda. Jinja town is located in the Eastern part of Uganda, 85km from Kampala city and it is the formal industrial town before Kampala. Jinja is located near the shores of a section of Lake Victoria where we find the source of River Nile. Jinja is a quiet, and relatively well planned with a lot of interesting attractions and activities. 2 Days Jinja water experience will give you an opportunity to enjoy the best of Jinja’s interesting activities and time to relax, and chill from the tiring week before and ahead.
+Located 80 kilometers east of Kampala, Jinja is regarded as the adventure capital of East Africa because of all the things one can do and enjoy on a visit to Jinja. Besides the source of the Nile, jinja is popular for activities like rafting, kayaking, bungee jumping, quad biking, and much more.
+
+Jinja is a perfect place to visit on its own or as part of a longer safari that includes several other places around Uganda.
+
+![nile_source](/source.jpeg)
+
+**Source of the Nile**
+
+The Nile River is the longest river in the World. It has been marketed as one of the first European explorers. River Nile is the longest river in Africa with Lake Victoria as its source.
+
+The river starts its 6,500km journey to the Mediterranean Sea (Egypt) beside Jinja town (Uganda) and holds the Owen Falls Dam the source of hydroelectricity for Uganda with one newly opened dam. A tour to the Nile will take you through another life of adventure.
+
+There is a golf course unwinding along the banks and the source of the Nile provides a pretty focal point for the flow of water from Lake Victoria’s only outlet. A boat ride out to Samuka Island is another trip in itself, not counting the beautiful fauna you will see along.
+
+![kayaking](/kayaking.jpeg)
+
+Booking a safari downstream on the Nile River brings you to Adrift Nile High Camp with various activities including a Bungee jump. A few kilometers further, is Bujagali Falls, the adventurer’s capital with grade-five white water rafting, kayaking, river boarding, and mountain biking.
+
+These activities offer a unique way to explore the river banks, passing through farms, forests, and villages beside the Nile.
+
+Up along the Nile’s course is Lake Kyoga which also feeds the river with fresh water. The course then leads you to the great Murchison Falls, where roars of millions of liters of water dropping from a lullaby.

@@ -12,15 +12,16 @@ import Post from "../../interfaces/post";
 
 import "./styles.css";
 interface ArrowProps {
-    className?: string;
-    style?: React.CSSProperties;
-    onClick?: () => void;
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: () => void;
 }
 
 interface ImageContainer {
-    heading: string;
-    subHeading: string;
-    allPosts: any[];
+  heading: string;
+  subHeading: string;
+  allPosts: any[];
+  className?: string;
 }
 
 function SampleNextArrow(props: ArrowProps) {
@@ -109,13 +110,13 @@ function ImageContainer(props: ImageContainer) {
   return (
     <div className="mt-3.5 px-7 py-4 w-full max-w-screen-xl animate-fade-up">
       <h1
-        className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-lg font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem]"
+        className={`animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-lg font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem] ${props.className}`}
         style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
       >
         <Balancer>{props.heading}</Balancer>
       </h1>
       <p
-        className="mt-2 animate-fade-up text-gray-500 opacity-0 md:text-xl"
+        className={`mt-2 animate-fade-up text-gray-500 opacity-0 md:text-xl ${props.className}`}
         style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
       >
         <Balancer>
@@ -127,12 +128,14 @@ function ImageContainer(props: ImageContainer) {
         <Slider ref={sliderRef} {...sliderSettings} className="animate-fade-up">
             {
               props.allPosts.map(post => (
-                <div key={post.slug} className="space-x-2">
+                <div key={post.slug}>
                   <Link
                     as={`/posts/${post.slug}`}
                     href="/posts/[slug]"
                   >
-                      <Image src={post.image} alt="lake" width={200} height={200}  className="rounded-md" />
+                      <div>
+                        <Image src={post.image} alt="lake" width={200} height={200}  className="rounded-md fixed-dimensions" />
+                      </div>
                       <p>{post.heading}</p>
                   </Link>
                 </div>

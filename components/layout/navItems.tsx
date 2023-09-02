@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Balancer from "react-wrap-balancer";
 import Link from "next/link";
 import { BedIcon } from "@/components/shared/icons";
@@ -30,14 +30,14 @@ const NavItems: React.FC<NavItemsProps> = ({ pathname }) => {
       </Link>
 
       <Link
-        href="/attractions"
+        href="/contact-us"
         passHref
         className={`flex space-x-2 items-center px-2 py-2 ${isActive(
-          "/attractions"
+          "/contact-us"
         )} hover:rounded-full hover:bg-gray-200 hover:drop-shadow`}
       >
         <Attractions />
-        <Balancer>Attractions</Balancer>
+        <Balancer>Contact Us</Balancer>
       </Link>
 
       <Link

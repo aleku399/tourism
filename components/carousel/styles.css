@@ -16,4 +16,8 @@
     width: 222px;
   
   }
-
+  .fixed-dimensions {
+    width: 200px; /* Set the desired width */
+    height: 136px; /* Set the desired height */
+    /* Add any other styling you want */
+  }

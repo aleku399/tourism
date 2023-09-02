@@ -13,3 +13,5 @@ export { default as Time} from "./time";
 export { default as LeftArrow} from "./left";
 export { default as RightArrow} from "./right";
 export { default as LocationIcon } from "./location";
+export { default as CheckIcon } from "./check";
+export { default as CloseIcon } from "./close";

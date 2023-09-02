@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
+import { usePathname } from 'next/navigation'
 import { useSignInModal } from "./sign-in-modal";
 import UserDropdown from "./user-dropdown";
 import { Session } from "next-auth";
@@ -11,8 +12,9 @@ import NavItems from "./navItems";
 const NavBar: React.FC<{ session: Session | null }> = ({ session }) => {
   const { SignInModal, setShowSignInModal } = useSignInModal();
   const scrolled = useScroll(50);
+  const pathname = usePathname();
 
-  const pathname = typeof window !== "undefined" ? window.location.pathname : "";
+
 
   return (
     <>

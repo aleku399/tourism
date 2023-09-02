@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import Balancer from "react-wrap-balancer";
+import WhyChooseUs  from "@/components/shared/choose";
 
 export default function About() {  
 
   return (
-      <div className="z-10 w-full max-w-xl px-5 xl:px-0"> 
-        <>
-            <article className="mb-32">
+      <> 
+        <div className="z-10 w-full max-w-2xl  px-5 xl:px-0">
+            <article>
                 <div className="my-2.5">
                     <Balancer>
                         About Us
@@ -35,7 +36,10 @@ export default function About() {
                     Departure time to any safari is not fixed so we can start safaris any time on vote of our clients depending on the destination of choice. We use very experienced guides who are knowledgeable about travel and wildlife but please note that many times safaris start early morning due to the long distances driven from Kampala to get to these prime tour destinations and it’s the best time to find the prime game-wild creature.
                 </p>
             </article>
-        </>
-      </div>
+        </div>
+        <div className="z-10 w-full  px-5 xl:px-0">
+            <WhyChooseUs />
+        </div>
+      </>
   )
 }
