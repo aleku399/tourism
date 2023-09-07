@@ -36,7 +36,7 @@ const NavBar: React.FC<{ session: Session | null }> = ({ session }) => {
                 height="30"
                 className="mr-2 rounded-sm"
               ></Image>
-              <p>Tourism</p>
+              <p>Kheal</p>
             </Link>
             <div>
               {session ? (

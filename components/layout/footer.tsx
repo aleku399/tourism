@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="px-4">
             <h2 className="text-xl font-semibold mb-4">Contact Information</h2>
             <p className="text-sm">
-              Tourism Safaris Ltd<br />
+              Khael Safaris<br />
               Address: Zana, off Entebbe road Kampala - Uganda<br />
               P.O Box 12345 Kampala<br />
               Phone: +256 755 574905<br />
