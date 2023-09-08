@@ -49,6 +49,7 @@
     "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.10",
+    "@types/mapbox-gl": "^2.7.13",
     "@types/ms": "^0.7.31",
     "@types/react": "^18.2.21",
     "@types/react-slick": "^0.23.10",
