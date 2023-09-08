@@ -95,7 +95,7 @@ const Search: React.FC<SearchProps> = ({locations}) => {
   };
 
   return (
-    <div ref={searchContainerRef} className="z-10 px-7 py-4 w-full max-w-screen-xl animate-fade-up  flex-col md:flex-row items-center md:space-x-2">
+    <div ref={searchContainerRef} className="z-10 px-7 py-4 w-full  animate-fade-up  flex-col md:flex-row items-center md:space-x-2">
       <div className="md:flex-grow w-full md:w-auto flex flex-col md:flex-row md:space-x-2">
         <div className="md:flex-grow w-full md:w-auto">
           <InputField

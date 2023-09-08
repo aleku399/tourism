@@ -17,7 +17,10 @@ export default async function Home() {
     'date',
     'slug',
     'image',
+    'trending',
   ]);
+
+  const trendingPosts = allPosts.filter(post => post.trending);
 
   return (
     <>
@@ -46,7 +49,7 @@ export default async function Home() {
         </p>
         <Search locations={allPosts}  />
       </div>
-        <CarouselContainer heading="Trending Destinations" subHeading="Travelers searching for Uganda also booked these" allPosts={allPosts}  />
+        <CarouselContainer heading="Trending Destinations" subHeading="Travelers searching for Uganda also booked these" allPosts={trendingPosts}  />
         <CarouselContainer heading="Explore Uganda" subHeading="These popular destinations have a lot to offer" allPosts={allPosts} />
     </>
   );

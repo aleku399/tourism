@@ -3,6 +3,7 @@ import PostBody from '../../../components/post-body'
 import { getPostBySlug, getAllPosts } from '../../../lib/api'
 import markdownToHtml from '../../../lib/markdownToHtml'
 import Inquiry from "@/components/shared/inquiry";
+import MapComp from "@/components/shared/map";
 
 
 type Props = {
@@ -35,24 +36,29 @@ export default  async function Post({ params }: Props) {
           <p>Loading…</p>
         ) : (
           <>
-            <article className="mb-32">
+            <article className="mb-2">
               <p
                 className="my-0.5 animate-fade-up  opacity-0 md:text-xl"
                 style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
               >
                 {title}
               </p>
-              <Image
-                src={post.image}
-                alt={`Cover Image for ${post.heading}`}
-                width={1300}
-                height={630}
-              />
+              {
+                post.heading !== "Bwindi Impenetrable" ? (
+                  <Image
+                  src={post.image}
+                  alt={`Cover Image for ${post.heading}`}
+                  width={1300}
+                  height={630}
+                />
+                ) : null
+              }
               <PostBody content={content} />
             </article>
           </>
         )}
       </div>
+      <MapComp />
       <div className="z-10 w-full  px-5">
         <Inquiry />
       </div>

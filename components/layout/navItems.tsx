@@ -21,7 +21,7 @@ const NavItems: React.FC<NavItemsProps> = ({ pathname }) => {
       <Link
         href="/"
         passHref
-        className={`flex space-x-2 items-center px-2 py-2 ${isActive(
+        className={`flex space-x-2 items-center px-1   py-2 ${isActive(
           "/"
         )} hover:rounded-full hover:bg-gray-200 hover:drop-shadow`}
       >
@@ -32,7 +32,7 @@ const NavItems: React.FC<NavItemsProps> = ({ pathname }) => {
       <Link
         href="/contact-us"
         passHref
-        className={`flex space-x-2 items-center px-2 py-2 ${isActive(
+        className={`flex space-x-2 items-center px-1   py-2 ${isActive(
           "/contact-us"
         )} hover:rounded-full hover:bg-gray-200 hover:drop-shadow`}
       >
@@ -43,7 +43,7 @@ const NavItems: React.FC<NavItemsProps> = ({ pathname }) => {
       <Link
         href="/about-us"
         passHref
-        className={`flex space-x-2 items-center px-2 py-2 ${isActive(
+        className={`flex space-x-2 items-center px-1 py-2 ${isActive(
           "/about-us"
         )} hover:rounded-full hover:bg-gray-200 hover:drop-shadow`}
       >
