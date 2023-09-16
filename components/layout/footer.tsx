@@ -6,7 +6,7 @@ export default function Footer() {
           <div className="px-4">
             <h2 className="text-xl font-semibold mb-4">Tourism SAFARIS</h2>
             <p className="text-sm">
-              Tourism  is a reliable Uganda Safaris & Tour operator with years of experience serving tourists from all over the world.
+              Khael Tourism Safaris  is a reliable Uganda Safaris & Tour operator with years of experience serving tourists from all over the world.
             </p>
           </div>
           <div className="px-4">
