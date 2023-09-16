@@ -88,7 +88,7 @@ export default async function SearchPlace({
                 Destination: <strong>{location}.</strong>
               </p>
               <p style={{ opacity: 1 }}>
-                Note: A 30% booking is due upon booking, with the balance cleared 1 month before the trip starts.
+                Note: A 30% deposit is due upon booking, with the balance cleared 1 month before the trip starts.
               </p>
             </div>
             <button className="mt-1 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none">

@@ -28,7 +28,7 @@ As you cruise, keep an eye out for approximately 60 bird species that call this 
 
 **Explore the Bat Cave**
 
-Concealed beneath the lush canopy of the Maramagambo Forest lies the enigmatic "Bat Cave." This cave features a viewing room, funded by the CDC, allowing visitors to observe not only the bats but also the pythons coexisting with them.
+Concealed beneath the lush canopy of the Maramagambo Forest lies the enigmatic "Bat Cave." This cave features a viewing room, funded by the **CDC**, allowing visitors to observe not only the bats but also the pythons coexisting with them.
 For a cultural twist to your cave exploration, consider a visit to the historic cave within the Nyanz'ibiri community. Here, a local guide will regale you with stories of its past use for offerings, cleansing rituals, and as a sanctuary during Uganda's tumultuous rule under Idi Amin.
 
 **Chimpanzee Tracking**
