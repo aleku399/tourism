@@ -47,23 +47,23 @@ const ContactUs = () => {
               <form className="bg-white shadow-md rounded px-8 pt-6 pb-8">
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Form</h2>
                     <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
-                            Your Names *
-                        </label>
-                        <div className="flex">
-                            <input
-                                className="w-1/2 mr-2 appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="firstName"
-                                type="text"
-                                placeholder="First"
-                            />
-                            <input
-                                className="w-1/2 appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="lastName"
-                                type="text"
-                                placeholder="Last"
-                            />
-                        </div>
+                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
+                        Your Names *
+                      </label>
+                      <div className="flex flex-col sm:flex-row">
+                        <input
+                          className="w-full mb-2 sm:w-1/2 sm:mr-2 appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          id="firstName"
+                          type="text"
+                          placeholder="First"
+                        />
+                        <input
+                          className="w-full mb-2 sm:w-1/2 appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          id="lastName"
+                          type="text"
+                          placeholder="Last"
+                        />
+                      </div>
                     </div>
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">

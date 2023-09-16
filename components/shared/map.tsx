@@ -3,6 +3,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl, { Map } from 'mapbox-gl'; 
 import "./styles.css";
+ 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWxla3UzOTkiLCJhIjoiY2praDBkbXpzMDlxNjNrcDBqNGUwc3kzeSJ9.Jfwtzm5tQfXFiWBjIQUvUA';
 
@@ -28,9 +29,7 @@ export default function MapComp() {
 
   return (
     <div className="z-10 w-full  px-5">
-      <div className="sidebar">
-      </div>
-      <div ref={mapContainer} className="map-container mb-2" />
+      <div ref={mapContainer} className="map-container mb-2"  />
     </div>
   );
 }
