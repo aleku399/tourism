@@ -1,4 +1,6 @@
 import React from 'react';
+import Contact from "@/components/shared/contact";
+import { savedContact } from "@/app/api/contact";
 
 const ContactUs = () => {
   return (
@@ -43,69 +45,7 @@ const ContactUs = () => {
               </p>
             </div>
 
-            <div>
-              <form className="bg-white shadow-md rounded px-8 pt-6 pb-8">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Form</h2>
-                    <div className="mb-4">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
-                        Your Names *
-                      </label>
-                      <div className="flex flex-col sm:flex-row">
-                        <input
-                          className="w-full mb-2 sm:w-1/2 sm:mr-2 appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                          id="firstName"
-                          type="text"
-                          placeholder="First"
-                        />
-                        <input
-                          className="w-full mb-2 sm:w-1/2 appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                          id="lastName"
-                          type="text"
-                          placeholder="Last"
-                        />
-                      </div>
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                            Your Email *
-                        </label>
-                        <input
-                            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="email"
-                            type="email"
-                            placeholder="Your Email"
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
-                            Your Phone
-                        </label>
-                        <input
-                            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="phone"
-                            type="tel"
-                            placeholder="Your Phone"
-                            maxLength={15}
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                            Your Message
-                        </label>
-                        <textarea
-                            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="message"
-                            rows={4}
-                            placeholder="Your Message"
-                        ></textarea>
-                    </div>
-                <div className="flex items-center justify-center">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                    Send Message
-                  </button>
-                </div>
-              </form>
-            </div>
+            <Contact  savedContact={savedContact} />
           </div>
         </div>
       </div>

@@ -60,3 +60,22 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model Contact {
+  id        String  @id @default(cuid())
+  firstName String
+  lastName  String
+  email     String
+  phone     String
+  message   String
+}
+
+model Inquiry {
+  id        String  @id @default(cuid())
+  names String
+  email     String
+  groupSize     String
+  phone     String
+  inquiry   String
+  info String
+}

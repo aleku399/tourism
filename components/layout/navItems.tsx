@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Balancer from "react-wrap-balancer";
 import Link from "next/link";
 import { BedIcon } from "@/components/shared/icons";
@@ -13,28 +13,26 @@ interface NavItemsProps {
 
 const NavItems: React.FC<NavItemsProps> = ({ pathname }) => {
   const isActive = (path: string) => {
-    return pathname === path ? "rounded-full bg-gray-200 drop-shadow" : "";
+    return pathname === path ? "rounded-full bg-gray-200 drop-shadow " : "";
   };
 
+  const linkStyles = "flex items-center px-2 py-1 space-x-1 md:px-3 md:py-1 md:space-x-2"; // Adjust the padding and spacing as needed
+
   return (
-    <div className="flex space-x-2">
+    <div className="flex flex-wrap">
       <Link
         href="/"
         passHref
-        className={`flex space-x-2 items-center px-1   py-2 ${isActive(
-          "/"
-        )} hover:rounded-full hover:bg-gray-200 hover:drop-shadow`}
+        className={`mb-1 ${linkStyles} ${isActive("/")}`}
       >
         <BedIcon />
-        <Balancer>Stays</Balancer>
+        <Balancer>Places</Balancer>
       </Link>
 
       <Link
         href="/contact-us"
         passHref
-        className={`flex space-x-2 items-center px-1   py-2 ${isActive(
-          "/contact-us"
-        )} hover:rounded-full hover:bg-gray-200 hover:drop-shadow`}
+        className={`mb-1 ${linkStyles} ${isActive("/contact-us")}`}
       >
         <Attractions />
         <Balancer>Contact Us</Balancer>
@@ -43,9 +41,7 @@ const NavItems: React.FC<NavItemsProps> = ({ pathname }) => {
       <Link
         href="/about-us"
         passHref
-        className={`flex space-x-2 items-center px-1 py-2 ${isActive(
-          "/about-us"
-        )} hover:rounded-full hover:bg-gray-200 hover:drop-shadow`}
+        className={`mb-1 ${linkStyles} ${isActive("/about-us")}`}
       >
         <PlaneIcon />
         <Balancer>About Us</Balancer>
