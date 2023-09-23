@@ -14,9 +14,10 @@ interface InputFieldProps {
   handleFocus?: () => void;
   handleBlur?: () => void;
   isFocused?: boolean;
+  rightIcon?: React.ReactNode;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ type, placeholder, value, error, onChange, icon, inputRef, handleBlur, handleFocus, isFocused }) => {
+const InputField: React.FC<InputFieldProps> = ({ type, placeholder, value, error, onChange, icon, inputRef, handleBlur, handleFocus, isFocused, rightIcon }) => {
 
   return (
     <div
@@ -37,6 +38,7 @@ const InputField: React.FC<InputFieldProps> = ({ type, placeholder, value, error
         onClick={handleFocus}
         onBlur={handleBlur}
       />
+      {rightIcon}
     </div>
   );
 };

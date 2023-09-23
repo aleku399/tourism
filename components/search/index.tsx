@@ -4,7 +4,7 @@ import React, { useState, ChangeEvent, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import { BedIcon, Time, People } from '@/components/shared/icons';
+import { BedIcon, Time, People, DownIcon } from '@/components/shared/icons';
 import useOutsideClick from "@/lib/hooks/use-outside-click";
 import InputField from './inputField';
 import LocationCard from './locationCard';
@@ -26,7 +26,7 @@ const Search: React.FC<SearchProps> = ({locations}) => {
   const locationInputRef = useRef<HTMLInputElement | null>(null);
 
   const [location, setLocation] = useState('');
-  const [departureDate, setDepartureDate] = useState<Value>(new Date());
+  const [departureDate, setDepartureDate] = useState<Date | null>(null);
   const [numOfPeople, setNumOfPeople] = useState('');
   const [searchStarted, setSearchStarted] = useState(false);
   const [dateSearch, setDateSearch] = useState(false);
@@ -108,7 +108,7 @@ const Search: React.FC<SearchProps> = ({locations}) => {
             onChange={handleLocationChange}
             handleFocus={handleLocationFocus} 
             isFocused={searchStarted} 
-            
+            rightIcon={<DownIcon  className="w-8 h-8" />}
           />
           <div className="relative z-50 mt-2">
             <div className="absolute">
@@ -120,7 +120,7 @@ const Search: React.FC<SearchProps> = ({locations}) => {
           <InputField
             icon={<Time className="w-8 h-8" />}
             type="text"
-            placeholder="Departure Date"
+            placeholder={departureDate ? departureDate.toString().slice(0, 10) : 'Departure Date'}
             value={departureDate ? departureDate.toString().slice(0, 10) : ''}
             error={false}
             isFocused={dateSearch}

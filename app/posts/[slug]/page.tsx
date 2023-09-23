@@ -4,6 +4,7 @@ import { getPostBySlug, getAllPosts } from '../../../lib/api'
 import markdownToHtml from '../../../lib/markdownToHtml'
 import Inquiry from "@/components/shared/inquiry";
 import MapComp from "@/components/shared/map";
+import { savedInquiry } from "@/app/api/contact";
 
 
 type Props = {
@@ -60,7 +61,7 @@ export default  async function Post({ params }: Props) {
       </div>
       <MapComp />
       <div className="z-10 w-full  px-5">
-        <Inquiry />
+        <Inquiry  savedInquiry={savedInquiry} />
       </div>
     </>
   )

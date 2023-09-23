@@ -15,3 +15,4 @@ export { default as RightArrow} from "./right";
 export { default as LocationIcon } from "./location";
 export { default as CheckIcon } from "./check";
 export { default as CloseIcon } from "./close";
+export { default as DownIcon } from "./down";
