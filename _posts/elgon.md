@@ -3,6 +3,8 @@ heading: 'Mount Elgon'
 title: 'Mount Elgon National Park'
 date: '2023-08-29'
 image: /mount-elgon-national-park.jpg
+latitude: 0.428320
+longitude: 33.203460
 ---
 Mount Elgon, straddling the border between Uganda and Kenya, is a majestic natural wonder and the centerpiece of Mount Elgon National Park. This towering giant rises to over 4000 meters above sea level, revealing its breathtaking beauty as you journey through its diverse climate zones towards the summit.
 

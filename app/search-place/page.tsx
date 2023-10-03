@@ -1,9 +1,41 @@
 import React from 'react';
 import Image from 'next/image';
-import Balancer from "react-wrap-balancer";
 import { getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import PostBody from "@/components/post-body";
+import BookNow from "@/components/search/payment";
+import { calculateDaysAndNights } from "@/lib/utils";
+
+type PriceTier = {
+  pax: string;
+  amount: number;
+};
+
+type PriceTiers = {
+  "1 PAX": PriceTier;
+  "2 PAX": PriceTier;
+  "4 PAX": PriceTier;
+  "6 PAX": PriceTier;
+};
+
+const priceTiers: PriceTiers = {
+  "1 PAX": {
+    pax: "1 Pax",
+    amount: 1000
+  },
+  "2 PAX": {
+    pax: "2 Pax",
+    amount: 1000
+  },
+  "4 PAX": {
+    pax: "4 Pax",
+    amount: 1000
+  },
+  "6 PAX": {
+    pax: "1 Pax",
+    amount: 1000
+  },
+}
 
 export default async function SearchPlace({
   searchParams,
@@ -11,6 +43,15 @@ export default async function SearchPlace({
   searchParams: { [key: string]: string }
 }) {
   const { slug, date, location, numOfPeople } = searchParams;
+
+  const dateParts = date.split(',');
+
+  const arrivalDateStr = dateParts[0].trim();
+  const departureDateStr = dateParts[1].trim();
+
+  const result = calculateDaysAndNights(arrivalDateStr, departureDateStr);
+
+  const pack = priceTiers[numOfPeople as keyof PriceTiers];
 
   if (!slug) {
     return <div>No results found.</div>;
@@ -29,28 +70,25 @@ export default async function SearchPlace({
 
   const content = await markdownToHtml(post.content || '');
 
-  return (
-    <div className="z-10 w-full max-w-xl px-5 xl:px-0">
-      {!post?.slug ? (
-        <p >Loading…</p>
-      ) : (
-        <>
-          <article className="mb-32">
-            <p
-                className="my-0.5 animate-fade-up  opacity-0 md:text-xl"
-                style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
-            >
-                {title}
-            </p>
-            <Image
-              src={post.image}
-              alt={`Cover Image for ${post.heading}`}
-              width={1300}
-              height={630}
-            />
-            <PostBody content={content} />
+  if (typeof result !== 'string') {
+    return (
+      <div className="z-10 w-full max-w-xl px-5 xl:px-0">
+        <article className="mb-32">
+          <p
+            className="my-0.5 animate-fade-up  opacity-0 md:text-xl"
+            style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
+          >
+            {title}
+          </p>
+          <Image
+            src={post.image}
+            alt={`Cover Image for ${post.heading}`}
+            width={1300}
+            height={630}
+          />
+          <PostBody content={content} />
 
-            <div className="border p-4 bg-white flex flex-col items-center rounded-md shadow-md">
+          <div className="border p-4 bg-white flex flex-col items-center rounded-md shadow-md">
             <table className="table-auto">
               <thead>
                 <tr>
@@ -79,7 +117,7 @@ export default async function SearchPlace({
             </table>
             <div className="mt-1 text-gray-500 text-center space-y-2">
               <p style={{ opacity: 1 }}>
-                Trip Duration: <strong>4 days, 3 nights.</strong>
+                Trip Duration: <strong>{result.days} days, {result.nights - 1} nights.</strong>
               </p>
               <p style={{ opacity: 1 }}>
                 Starting Point: <strong>Entebbe, Uganda.</strong>
@@ -91,13 +129,12 @@ export default async function SearchPlace({
                 Note: A 30% deposit is due upon booking, with the balance cleared 1 month before the trip starts.
               </p>
             </div>
-            <button className="mt-1 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none">
-              Book Now
-            </button>
+            <BookNow amount={pack.amount} />
           </div>
-          </article>
-        </>
-      )}
-    </div>
-  );
+        </article>
+      </div>
+    );
+  } else {
+    return <div>{result}</div>;
+  }
 }

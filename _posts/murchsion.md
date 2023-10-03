@@ -4,6 +4,8 @@ title: 'Giraffes in Murchison Falls National Park'
 date: '2023-08-29'
 image: /uganda-giraffe.jpeg
 trending: true
+latitude: 2.249999 
+longitude: 31.7999968
 ---
 
 **Discover Murchison Falls:** Uganda's Natural Wonder

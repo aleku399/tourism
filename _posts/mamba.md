@@ -4,6 +4,8 @@ title: 'Mabamba Swamp'
 date: '2023-08-29'
 image: /mabamba-shoebill.jpeg
 trending: true
+latitude: -0.5999976 
+longitude: 30.9499962
 ---
 
 **Mabamba Swamp: Home of the Majestic Shoebill Stork**

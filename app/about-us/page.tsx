@@ -20,7 +20,7 @@ export default function About() {
                     height={1080}
                 />
                 <p className="my-2.5">
-                    Khael Safaris is an indigenous East African Safari Agency fully registered and licensed in Kampala Uganda. We drive travellers’ interests providing them with their desired ultimate safari experiences in Uganda and all around East Africa. Our committed staff has offered excellent services to several group clients and individual travellers over the years, as well as promoting Uganda-the pearl of Africa as the world’s best tourist destination.
+                    Safari Boots is an indigenous East African Safari Agency fully registered and licensed in Kampala Uganda. We drive travellers’ interests providing them with their desired ultimate safari experiences in Uganda and all around East Africa. Our committed staff has offered excellent services to several group clients and individual travellers over the years, as well as promoting Uganda-the pearl of Africa as the world’s best tourist destination.
                 </p>
                 <p className="my-2.5">
                     We offer Gorilla tracking safaris and Chimpanzee Trekking, wild game tours, Mountain Climbing adventures, city tours, white water rafting, boat cruise trips, fishing trips, horseback riding, bird watching, Car hire and hotel booking. We run safaris in all the major Uganda National Game Parks and Reserves such as Murchison falls, Queen Elizabeth, Bwindi Impenetrable forest National Park(East Africa’s Mountain Gorilla safari Destination), mountain Elgon, Kidepo, Mgahinga and the Virunga mountain range etc as well as all other prime safari destination in East Africa based on your interests.

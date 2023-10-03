@@ -7,11 +7,16 @@ import "./styles.css";
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWxla3UzOTkiLCJhIjoiY2praDBkbXpzMDlxNjNrcDBqNGUwc3kzeSJ9.Jfwtzm5tQfXFiWBjIQUvUA';
 
-export default function MapComp() {
+interface Props {
+  latitude: number;
+  longitude: number;
+}
+
+export default function MapComp({latitude, longitude}: Props) {
   const mapContainer = useRef<HTMLDivElement | null>(null); 
   const map = useRef<Map | null>(null); 
-  const [lng, setLng] = useState(32.582520);
-  const [lat, setLat] = useState(0.347596);
+  const [lng, setLng] = useState();
+  const [lat, setLat] = useState();
   const [zoom, setZoom] = useState(9);
 
   useEffect(() => {
@@ -20,12 +25,12 @@ export default function MapComp() {
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/streets-v12',
-        center: [lng, lat],
+        center: [longitude, latitude],
         zoom: zoom
       });
 
     }
-  }, [lng, lat, zoom]);
+  }, [latitude, longitude, zoom]);
 
   return (
     <div className="z-10 w-full  px-5">

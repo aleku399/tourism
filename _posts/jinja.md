@@ -4,6 +4,8 @@ title: 'Jinja'
 date: '2023-08-02'
 image: /jinja.jpeg
 trending: true
+latitude: 0.43902
+longitude: 33.20317
 ---
 
 **Discover Jinja: Uganda's Hidden Gem**

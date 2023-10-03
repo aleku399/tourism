@@ -30,13 +30,13 @@ const NavBar: React.FC<{ session: Session | null }> = ({ session }) => {
           <div className="flex h-16 items-center justify-between">
             <Link href="/" className="flex items-center font-display text-2xl">
               <Image
-                src="/logo.png"
-                alt="Precedent logo"
+                src="/boots.jpeg"
+                alt="logo"
                 width="30"
                 height="30"
-                className="mr-2 rounded-sm"
+                className="mr-2 rounded-3xl"
               ></Image>
-              <p>Kheal</p>
+              <p>Safari Boots</p>
             </Link>
             <div>
               {session ? (

@@ -4,6 +4,8 @@ title: 'Sipi Falls, Kapchorwa'
 date: '2020-01-04'
 image: /sipi.jpg
 trending: true
+latitude:  1.3378
+longitude: 34.3794
 ---
 
 **Sipi Falls, Kapchorwa: Where Nature's Beauty Unveils Its Majesty**

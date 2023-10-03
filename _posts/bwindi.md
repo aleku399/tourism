@@ -3,6 +3,8 @@ heading: 'Bwindi Impenetrable'
 title: ''
 date: '2023-08-29'
 image: /bwindi-silverback.jpeg
+latitude: -1.003351
+lonitude: 29.645311
 ---
 **The Bwindi Experience**.
 The Bwindi Impenetrable Forest is located in the south-western part of Uganda in Kanungu District just along the Albertine Rift valley. The park is popularly known to protect more than 320 mountain gorillas- which is half of the population in the world. 
