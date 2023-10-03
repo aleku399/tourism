@@ -6,7 +6,7 @@ export default function Footer() {
           <div className="px-4">
             <h2 className="text-xl font-semibold mb-4">Tourism SAFARIS</h2>
             <p className="text-sm">
-              Khael Tourism Safaris  is a reliable Uganda Safaris & Tour operator with years of experience serving tourists from all over the world.
+              Safari Boots  is a reliable Uganda Safaris & Tour operator with years of experience serving tourists from all over the world.
             </p>
           </div>
           <div className="px-4">
@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="px-4">
             <h2 className="text-xl font-semibold mb-4">Contact Information</h2>
             <p className="text-sm">
-              Khael Safaris<br />
+              Safari Boots<br />
               Address: Zana, off Entebbe road Kampala - Uganda<br />
               P.O Box 12345 Kampala<br />
               Phone: +256 755 574905<br />

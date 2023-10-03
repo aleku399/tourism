@@ -3,6 +3,8 @@ heading: 'Entebbe'
 title: 'Uganda Wildlife Entertainment Center'
 date: '2023-08-29'
 image: /uwec.jpeg
+latitude: 0.06444
+longitude: 32.44694
 ---
 **Discover Entebbe: Uganda's Lakeside Gem**
 

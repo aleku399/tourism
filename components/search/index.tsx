@@ -8,6 +8,7 @@ import { BedIcon, Time, People, DownIcon } from '@/components/shared/icons';
 import useOutsideClick from "@/lib/hooks/use-outside-click";
 import InputField from './inputField';
 import LocationCard from './locationCard';
+import PaxCard from "./paxCard";
 
 import "./styles.css";
 
@@ -27,16 +28,22 @@ const Search: React.FC<SearchProps> = ({locations}) => {
 
   const [location, setLocation] = useState('');
   const [departureDate, setDepartureDate] = useState<Date | null>(null);
+  const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([null, null]);
   const [numOfPeople, setNumOfPeople] = useState('');
   const [searchStarted, setSearchStarted] = useState(false);
   const [dateSearch, setDateSearch] = useState(false);
+  const [paxSearch, setPaxSearch] = useState(false);
   const [places, setPlaces] = useState(locations);
   const [slug, setSlug] = useState("");
 
   useOutsideClick({
     ref: searchContainerRef,
-    handlers: [() => setSearchStarted(false), () => setDateSearch(false)],
-  });
+    handlers: [
+      () => setSearchStarted(false),
+      () => setDateSearch(false),
+      () => setPaxSearch(false) 
+      ]
+    });
 
 
   const handleLocationFocus = () => {
@@ -83,13 +90,24 @@ const Search: React.FC<SearchProps> = ({locations}) => {
     setNumOfPeople(event.target.value);
   };
 
+  const onPaxClick = (pax: string) => { 
+    setNumOfPeople(pax);
+    setPaxSearch(false);
+  } ; 
+
   const handleSearchClick = () => {
+    const formattedDateRange = dateRange.map(date => date?.toISOString()).join(',');
+
+    if (!slug || !formattedDateRange || !location || !numOfPeople) {
+      return;
+    }
+
     const queryParams = new URLSearchParams({
       slug,
-      date: departureDate instanceof Date ? departureDate.toISOString() : '',
+      date: formattedDateRange,
       location,
       numOfPeople,
-    });
+    })
 
     router.push(`/search-place?${queryParams.toString()}`);
   };
@@ -120,15 +138,28 @@ const Search: React.FC<SearchProps> = ({locations}) => {
           <InputField
             icon={<Time className="w-8 h-8" />}
             type="text"
-            placeholder={departureDate ? departureDate.toString().slice(0, 10) : 'Departure Date'}
-            value={departureDate ? departureDate.toString().slice(0, 10) : ''}
+            placeholder={
+              dateRange[0] && dateRange[1]
+                ? `${dateRange[0].toString().slice(0, 10)} - ${dateRange[1].toString().slice(0, 10)}`
+                : 'Arrival Date - Departure Date'
+            }
+            // placeholder={departureDate ? departureDate.toString().slice(0, 10) : 'Departure Date'}
+            value=""
             error={false}
             isFocused={dateSearch}
             handleFocus={handleDateFocus}
           />
           <div className="relative z-50 mt-2">
             <div className="absolute">
-              { dateSearch && <Calendar onChange={handleDateChange} value={departureDate} /> }
+              { dateSearch && <Calendar 
+                onChange={(date) => {
+                  if (Array.isArray(date) && date.length === 2) {
+                    setDateRange(date as [Date, Date]);
+                  }
+                }}
+                selectRange
+                value={dateRange}
+              /> }
             </div>
           </div>
         </div>
@@ -139,8 +170,24 @@ const Search: React.FC<SearchProps> = ({locations}) => {
             placeholder="Number of People"
             value={numOfPeople}
             error={false}
-            onChange={handleNumOfPeopleChange}
+            // onChange={handleNumOfPeopleChange}
+            handleFocus={() => setPaxSearch(true)} 
+            isFocused={paxSearch} 
+            rightIcon={<DownIcon  className="w-8 h-8" />}
           />
+          <div className="relative z-50 mt-2">
+            <div className="absolute">
+              {paxSearch && <PaxCard 
+                paxs={[
+                  "1 PAX",
+                  "2 PAX",
+                  "4 PAX",
+                  "6 PAX"
+                ]}
+                onPaxClick={onPaxClick}  
+              />}
+            </div>
+          </div>
         </div>
         <div className="mt-1 md:flex-grow w-full md:w-auto">
           <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none md:w-auto w-full md:w-auto mt-4 md:mt-0" onClick={handleSearchClick}>

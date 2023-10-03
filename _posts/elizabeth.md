@@ -4,6 +4,8 @@ title: 'Queen Elizabeth National Park'
 date: '2023-08-29'
 image: /ishasha-lions.jpeg
 trending: true
+latitude: 0.172490
+longitude: 30.085871
 ---
 
 Nestled in western Uganda, Queen Elizabeth National Park (QENP) reigns supreme as the country's most renowned savannah park. With its captivating array of wildlife, including the iconic tree-climbing lions and bountiful schools of hippos residing along the Kazinga Channel, QENP stands as an irresistible attraction for wildlife enthusiasts.

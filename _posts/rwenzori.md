@@ -4,6 +4,8 @@ title: 'Rwenzori Mountains'
 date: '2023-08-08'
 image: /margarita-peak-rwenzori.jpeg
 trending: true
+latitude: 0.3848 
+longitude: 29.8697
 ---
 **4-Day Rwenzori Mountains Expedition: Unveiling the Peaks of Africa's Alpine Wonderland**
 

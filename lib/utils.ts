@@ -61,3 +61,25 @@ export const truncate = (str: string, length: number) => {
   if (!str || str.length <= length) return str;
   return `${str.slice(0, length)}...`;
 };
+
+export function calculateDaysAndNights(startDateStr: string, endDateStr: string) {
+  const startDateParts = startDateStr.split(', ');
+  const endDateParts = endDateStr.split(', ');
+
+  const startDate = new Date(startDateParts[0]);
+  const endDate = new Date(endDateParts[0]);
+
+  if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+    return 'Invalid dates';
+  }
+
+  const timeDifference = endDate.getTime() - startDate.getTime();
+
+  const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  const nightsDifference = daysDifference;
+
+  return {
+    days: daysDifference,
+    nights: nightsDifference,
+  };
+}

@@ -3,6 +3,8 @@ heading: 'Ziwa Rhino'
 title: 'Ziwa Rhino Sanctuary.'
 date: '2023-08-29'
 image: /ziwa-rhinos.jpeg
+latitude: 1.485556
+longitude: 32.095278
 ---
 
 **Ziwa Rhino Sanctuary: A Haven for Uganda's Rhinoceros Conservation**

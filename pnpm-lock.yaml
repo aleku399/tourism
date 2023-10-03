@@ -38,6 +38,9 @@ dependencies:
   eslint-config-next:
     specifier: ^13.4.19
     version: 13.4.19(eslint@8.31.0)(typescript@4.9.4)
+  flutterwave-react-v3:
+    specifier: ^1.3.0
+    version: 1.3.0(react-dom@18.2.0)(react@18.2.0)
   focus-trap-react:
     specifier: ^10.2.1
     version: 10.2.1(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
@@ -3235,6 +3238,14 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
+  /axios@0.21.4:
+    resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
+    dependencies:
+      follow-redirects: 1.15.3
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /axobject-query@3.2.1:
     resolution: {integrity: sha512-jsyHu61e6N4Vbz/v18DHwWYKK0bSWLqn47eeDSKPB7m8tqMHF9YJ+mhIk2lVteyZrY8tnSj/jHOv4YiTCuCJgg==}
     dependencies:
@@ -4553,6 +4564,19 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: false
 
+  /flutterwave-react-v3@1.3.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-y0dGSgxh9H/KMSDFurnoPYO3D6DSeOCZHPdLt8DnbtCkjgYgzNdqeXKvxerEaOJyitzXITsmlbzYdrEO/Lju3g==}
+    peerDependencies:
+      react: ^15.0.0 || ^18.0.0
+      react-dom: ^15.0.0 || ^18.0.0
+    dependencies:
+      axios: 0.21.4
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /focus-trap-react@10.2.1(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-UrAKOn52lvfHF6lkUMfFhlQxFgahyNW5i6FpHWkDxAeD4FSk3iwx9n4UEA4Sims0G5WiGIi0fAyoq3/UVeNCYA==}
     peerDependencies:
@@ -4571,6 +4595,16 @@ packages:
     resolution: {integrity: sha512-p6vGNNWLDGwJCiEjkSK6oERj/hEyI9ITsSwIUICBoKLlWiTWXJRfQibCwcoi50rTZdbi87qDtUlMCmQwsGSgPw==}
     dependencies:
       tabbable: 6.2.0
+    dev: false
+
+  /follow-redirects@1.15.3:
+    resolution: {integrity: sha512-1VzOtuEM8pC9SFU1E+8KfTjZyMztRsgEfwQl44z8A25uy13jSzTj6dyK2Df52iV0vgHCfBwLhDWevLn95w5v6Q==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: false
 
   /for-each@0.3.3:

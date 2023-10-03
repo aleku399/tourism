@@ -3,6 +3,9 @@ heading: 'Lake Bunyonyi'
 title: 'Lake Bunyonyi'
 date: '2023-08-29'
 image: /bunyonyi.jpeg
+latitude: -0.042500
+longitude: 30.101830
+
 ---
 
 Lake Bunyonyi is a water body located between Kisoro and Kabale in the South-Western part of Uganda before the Rwanda border. It is the second deepest lake in Africa as witnessed by most travelers that safari Uganda on their bird watching adventures. It is dotted by more than 20 small islands which can be explored by local wooden boats.  

@@ -3,6 +3,8 @@ heading: 'Kalangala, Uganda'
 title: ' Ssese Islands in Lake Victoria'
 date: '2020-01-04'
 image: /ssese.jpeg
+latitude: -0.321971
+longitude: 32.291608
 ---
 
 **Ssese Islands: Uganda's Hidden Paradise**

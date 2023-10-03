@@ -9,13 +9,14 @@ import { Suspense } from "react";
 export const metadata = {
   title: "Explore Uganda",
   description:
-    "Khael will help you find your next vacation",
+    "Safari Boots will help you find your next vacation",
   twitter: {
     card: "summary_large_image",
-    title: "Khael - Explore Uganda",
+    title: "Safari Boots - Explore Uganda",
     description:
       "We will make your stay the best in uganda,",
     creator: "@aleku399",
+    image: "/boots.jpeg",
   },
   metadataBase: new URL("https://tourism-5xim-aleku399.vercel.app/"),
   themeColor: "#FFF",

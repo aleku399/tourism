@@ -3,6 +3,8 @@ heading: 'Semuliki National Park'
 title: 'Semuliki National Park'
 date: '2023-08-29'
 image: /semliki.jpg
+latitude: -0.8333
+longitude: 30.0500
 ---
 
  **Semuliki National Park: Uganda's Hidden Gem**

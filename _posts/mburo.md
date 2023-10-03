@@ -4,6 +4,8 @@ title: 'Lake Mburo National Park'
 date: '2023-08-29'
 image: /mburo.jpeg
 trending: true
+latitude: 0.6000
+longitude: 30.9500
 ---
 
 Embrace the tranquility of Lake Mburo National Park,often described as a compact little gem of wildlife. It is the closest, national park, to Kampala and can be reached in about 4 hours of driving along the Kampala – Mbarara Highway – just before reaching Mbarara.This enchanting destination offers a serene escape for nature lovers and adventure seekers alike.

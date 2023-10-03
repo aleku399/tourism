@@ -3,6 +3,8 @@ heading: 'Kibale National'
 title: 'Kibale National Park'
 date: '2023-08-29'
 image: /chimp-in-tree.jpeg
+latitude: 0.486176
+longitude: 30.389665
 ---
 
 **Kibale National Park: Where Primate Magic Unfolds**

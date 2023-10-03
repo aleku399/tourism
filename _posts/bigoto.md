@@ -3,7 +3,8 @@ heading: 'Bigodi Wetland'
 title: 'Bigodi Wetland'
 date: '2023-08-29'
 image: /greatblueturaco.jpeg
-trending: true
+latitude: 0.389950
+longitude: 30.401576
 ---
 
 The Bigodi Wetland Sanctuary is a community-driven project of the Kibale Association for Rural and Environmental Development meant to preserve and protect the Magombe swamp. Located in Kibale National park in the western part of Uganda and is home to a variety of bird species including the famous great blue turaco birds. Other bird species include the Papyrus Gonolek, Kingfishers, Waxbills, Cuckoos, Weavers and Hornbills. 

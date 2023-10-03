@@ -23,6 +23,8 @@ export default  async function Post({ params }: Props) {
     'slug',
     'content',
     'image',
+    'latitude',
+    'longitude'
   ])
 
   const title = `${post.title}`;
@@ -59,7 +61,7 @@ export default  async function Post({ params }: Props) {
           </>
         )}
       </div>
-      <MapComp />
+      <MapComp latitude={parseFloat(post.latitude)} longitude={parseFloat(post.longitude)} />
       <div className="z-10 w-full  px-5">
         <Inquiry  savedInquiry={savedInquiry} />
       </div>

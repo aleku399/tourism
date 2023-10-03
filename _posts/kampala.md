@@ -4,6 +4,8 @@ title: '6 Days Murchison falls national park- Bugoma forest reserve and Kibale n
 date: '2023-08-05'
 image: /kampala-city-tour.png
 trending: true
+latitude: 0.347596
+longitude: 32.582520
 ---
 **Kampala: The Heartbeat of Uganda**
 

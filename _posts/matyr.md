@@ -3,6 +3,8 @@ heading: 'Uganda Martyrs'
 title: 'Uganda Martyrs Shrine'
 date: '2023-08-29'
 image: /uganda-martyrs.jpeg
+latitude: 0.395289
+longitude: 32.665835
 ---
 
 **The Uganda Martyrs: A Tale of Unwavering Faith**

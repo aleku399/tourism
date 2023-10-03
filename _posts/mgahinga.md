@@ -3,6 +3,8 @@ heading: 'Mgahinga Gorilla'
 title: 'Mgahinga Gorilla National Park'
 date: '2023-08-02'
 image: /mountain-gorilla-1.jpeg
+latitude: -1.363721
+longitude: 29.638269
 ---
 **Mgahinga Gorilla National Park:** Where Nature Meets Adventure
 
