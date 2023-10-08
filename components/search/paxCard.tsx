@@ -9,7 +9,7 @@ interface PaxProps {
 
 const PaxCard: React.FC<PaxProps> = ({ paxs, onPaxClick }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 mt-2 z-40 w-96 max-h-80 overflow-y-auto">
+    <div className="bg-white rounded-lg shadow-md p-4 mt-2 z-40 sm:w-96 md:max-h-80 overflow-y-auto">
       <h2 className="text-lg font-semibold mb-4">Number of People</h2>
       <ul className="space-y-2">
         {paxs.map((pax, index) => (

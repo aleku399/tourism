@@ -10,7 +10,7 @@ interface LocationProps {
 
 const LocationCard: React.FC<LocationProps> = ({ locations, onLocationClick }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 mt-2 z-40 w-96 max-h-80 overflow-y-auto">
+    <div className="bg-white rounded-lg shadow-md p-4 mt-2 z-40 sm:w-96 md:max-h-80 overflow-y-auto">
       <h2 className="text-lg font-semibold mb-4">Popular Destinations Nearby</h2>
       <ul className="space-y-2">
         {locations.map((location, index) => (
@@ -28,4 +28,4 @@ const LocationCard: React.FC<LocationProps> = ({ locations, onLocationClick }) =
   );
 };
 
-export default LocationCard
+export default LocationCard;
