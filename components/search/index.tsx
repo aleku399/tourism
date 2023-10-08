@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, ChangeEvent, useRef, useEffect } from 'react';
+import React, { useState, ChangeEvent, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
@@ -41,10 +41,9 @@ const Search: React.FC<SearchProps> = ({locations}) => {
     handlers: [
       () => setSearchStarted(false),
       () => setDateSearch(false),
-      () => setPaxSearch(false) 
-      ]
-    });
-
+      () => setPaxSearch(false)
+    ]
+  });
 
   const handleLocationFocus = () => {
     setSearchStarted(true);
@@ -70,7 +69,6 @@ const Search: React.FC<SearchProps> = ({locations}) => {
     setSlug(clickedLocation.slug);
     setSearchStarted(false);
   };
-  
 
   const handleDateFocus = () => {
     setDateSearch(true);
@@ -83,8 +81,7 @@ const Search: React.FC<SearchProps> = ({locations}) => {
       setDepartureDate(date);
     }
     setDateSearch(false);
-  }
-
+  };
 
   const handleNumOfPeopleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setNumOfPeople(event.target.value);
@@ -93,7 +90,7 @@ const Search: React.FC<SearchProps> = ({locations}) => {
   const onPaxClick = (pax: string) => { 
     setNumOfPeople(pax);
     setPaxSearch(false);
-  } ; 
+  };
 
   const handleSearchClick = () => {
     const formattedDateRange = dateRange.map(date => date?.toISOString()).join(',');
@@ -107,13 +104,13 @@ const Search: React.FC<SearchProps> = ({locations}) => {
       date: formattedDateRange,
       location,
       numOfPeople,
-    })
+    });
 
     router.push(`/search-place?${queryParams.toString()}`);
   };
 
   return (
-    <div ref={searchContainerRef} className="z-10 px-7 py-4 w-full  animate-fade-up  flex-col md:flex-row items-center md:space-x-2">
+    <div ref={searchContainerRef} className="z-10 px-7 py-4 w-full animate-fade-up flex-col md:flex-row items-center md:space-x-2">
       <div className="md:flex-grow w-full md:w-auto flex flex-col md:flex-row md:space-x-2">
         <div className="md:flex-grow w-full md:w-auto">
           <InputField
@@ -126,11 +123,11 @@ const Search: React.FC<SearchProps> = ({locations}) => {
             onChange={handleLocationChange}
             handleFocus={handleLocationFocus} 
             isFocused={searchStarted} 
-            rightIcon={<DownIcon  className="w-8 h-8" />}
+            rightIcon={<DownIcon className="w-8 h-8" />}
           />
           <div className="relative z-50 mt-2">
             <div className="absolute">
-              {searchStarted && <LocationCard locations={places} onLocationClick={handleLocationClick}  />}
+              {searchStarted && <LocationCard locations={places} onLocationClick={handleLocationClick} />}
             </div>
           </div>
         </div>
@@ -143,7 +140,6 @@ const Search: React.FC<SearchProps> = ({locations}) => {
                 ? `${dateRange[0].toString().slice(0, 10)} - ${dateRange[1].toString().slice(0, 10)}`
                 : 'Arrival Date - Departure Date'
             }
-            // placeholder={departureDate ? departureDate.toString().slice(0, 10) : 'Departure Date'}
             value=""
             error={false}
             isFocused={dateSearch}
@@ -170,13 +166,12 @@ const Search: React.FC<SearchProps> = ({locations}) => {
             placeholder="Number of People"
             value={numOfPeople}
             error={false}
-            // onChange={handleNumOfPeopleChange}
             handleFocus={() => setPaxSearch(true)} 
             isFocused={paxSearch} 
-            rightIcon={<DownIcon  className="w-8 h-8" />}
+            rightIcon={<DownIcon className="w-8 h-8" />}
           />
           <div className="relative z-50 mt-2">
-            <div className="absolute">
+            <div className={`absolute ${dateSearch ? 'w-full' : 'w-0 h-0'} md:w-auto`}>
               {paxSearch && <PaxCard 
                 paxs={[
                   "1 PAX",

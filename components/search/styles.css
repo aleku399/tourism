@@ -6,6 +6,12 @@
     border-radius: 0.5rem; 
 }
 
+@media (max-width: 768px) {
+  .react-calendar {
+      width: 300px;
+  }
+}
+
 .map-container {
     height: 400px;
   }
